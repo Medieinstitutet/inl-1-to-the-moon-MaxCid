@@ -77,7 +77,7 @@ html body {
   text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
   -webkit-animation: fade_move_down 3.5s ease-in-out infinite;
   animation: fade_move_down 3.5s ease-in-out infinite;
-  /*animated scroll arrow animation*/
+  /*--------animated scroll arrow animation---------*/
 }
 @-webkit-keyframes fade_move_down {
   0% {
@@ -427,7 +427,7 @@ html {
     display: none;
   }
   .SpacePage {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.59), rgba(0, 0, 0, 0.477)), url(/assets/photos/wide-universe.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.59), rgba(0, 0, 0, 0.477)), url(assets/photos/wide-universe.jpg);
     background-size: cover;
     background-position: center center;
   }
