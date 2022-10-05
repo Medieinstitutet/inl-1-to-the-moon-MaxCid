@@ -477,7 +477,7 @@ html {
   }
   .SpacePage .Major-Tom-pic::before {
     content: "";
-    background-image: url(/assets/photos/major_tom1.jpg);
+    background-image: url(assets/photos/major_tom1.jpg);
     background-size: 85px 125px;
     width: 125px;
     height: 125px;
