@@ -215,7 +215,7 @@ html {
 
 /*-------------Space-Text-Page--------------*/
 .SpacePage {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.434), rgba(0, 0, 0, 0.7)), url(assets/photos/raphael-nogueira-svbDI1Pq30s-unsplash.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.434), rgba(0, 0, 0, 0.7)), url(../assets/photos/raphael-nogueira-svbDI1Pq30s-unsplash.jpg);
   background-size: cover;
   color: rgb(226, 226, 226);
   font-family: "Rubik", sans-serif;
@@ -552,21 +552,21 @@ html {
 }
 
 /*----------Mobilregler------*/
-@media screen and (min-width: 300px) {
-  .astronaut .heading-box .link span {
-    position: relative;
-    left: 0px;
-    transition: left cubic-bezier(0.65, 0, 0.35, 1);
-  }
-  .astronaut .heading-box .link:hover span {
-    position: relative;
-    left: 10px;
-  }
-  .Headerlink {
-    position: relative;
-    right: 5px;
-    top: 7px;
-    font-weight: 100;
-    cursor: pointer;
-  }
+.astronaut .heading-box .link span {
+  position: relative;
+  left: 0px;
+  transition: left cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.astronaut .heading-box .link:hover span {
+  position: relative;
+  left: 10px;
+}
+
+.Headerlink {
+  position: relative;
+  right: 5px;
+  top: 7px;
+  font-weight: 100;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
