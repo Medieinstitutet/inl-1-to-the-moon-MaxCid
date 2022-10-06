@@ -213,7 +213,7 @@ html {
 
 /*-------------Space-Text-Page--------------*/
 .SpacePage {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.434), rgba(0, 0, 0, 0.7)), url(../assets/photos/raphael-nogueira-svbDI1Pq30s-unsplash.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.434), rgba(0, 0, 0, 0.7)), url(assets/photos/raphael-nogueira-svbDI1Pq30s-unsplash.jpg);
   background-size: cover;
   color: rgb(226, 226, 226);
   font-family: "Rubik", sans-serif;
@@ -424,7 +424,7 @@ html {
     display: none;
   }
   .SpacePage {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.59), rgba(0, 0, 0, 0.477)), url(../assets/photos/wide-universe.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.59), rgba(0, 0, 0, 0.477)), url(assets/photos/wide-universe.jpg);
     background-size: cover;
     background-position: center center;
   }
