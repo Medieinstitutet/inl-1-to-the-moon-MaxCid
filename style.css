@@ -578,4 +578,38 @@ html {
     cursor: pointer;
     font-size: 15px;
   }
+  .SpacePage .quote1 {
+    font-size: 25px;
+    left: 20px;
+    top: 14px;
+    font-style: italic;
+    font-weight: 100;
+  }
+  .SpacePage .quote1::after {
+    content: close-quote;
+    font-weight: normal;
+    font-size: 1.2rem;
+    color: white;
+    font-family: "rubik", Times, serif;
+    position: absolute;
+    top: 67px;
+    left: 95px;
+  }
+  .SpacePage .quote1::before {
+    content: open-quote;
+    font-weight: normal;
+    font-size: 1.2rem;
+    color: white;
+    font-family: "rubik", Times, serif;
+    position: absolute;
+    left: -4px;
+    top: 1px;
+  }
+  .SpacePage .titleSpacePage {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 15px -28px;
+    margin-top: -1.23px;
+    margin-bottom: 18px;
+  }
 }/*# sourceMappingURL=style.css.map */
