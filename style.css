@@ -1,0 +1,615 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.Fullheight {
+  min-height: 100vh;
+}
+
+/*-----------ASTRONAUTA-----------*/
+.astronauta {
+  background-image: url(assets/photos/adam-miller-dBaz0xhCkPY-unsplash.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.astronauta .Headerbox {
+  border: 4px solid black;
+  width: 145px;
+  height: 166px;
+  background-color: rgba(255, 255, 255, 0.478);
+  position: absolute;
+  top: 46px;
+  left: 38px;
+  font-family: "Rubik", sans-serif;
+}
+
+.HeaderTxt {
+  font-size: 35px;
+  margin-bottom: 10px;
+  margin-top: 15px;
+  font-weight: 800;
+}
+
+.astronauta .Headerbox {
+  text-align: center;
+}
+
+.astronauta .Headerbox .Headerlink span {
+  position: relative;
+  left: 0;
+  transition: left 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.astronauta .Headerbox .Headerlink:hover span {
+  position: relative;
+  left: 10px;
+}
+
+html body {
+  background: #000;
+}
+
+.scroll-down-arrow {
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2hldnJvbl90aGluX2Rvd24iIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIwIDIwIiBmaWxsPSJ3aGl0ZSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggZD0iTTE3LjQxOCw2LjEwOWMwLjI3Mi0wLjI2OCwwLjcwOS0wLjI2OCwwLjk3OSwwYzAuMjcsMC4yNjgsMC4yNzEsMC43MDEsMCwwLjk2OWwtNy45MDgsNy44M2MtMC4yNywwLjI2OC0wLjcwNywwLjI2OC0wLjk3OSwwbC03LjkwOC03LjgzYy0wLjI3LTAuMjY4LTAuMjctMC43MDEsMC0wLjk2OWMwLjI3MS0wLjI2OCwwLjcwOS0wLjI2OCwwLjk3OSwwTDEwLDEzLjI1TDE3LjQxOCw2LjEwOXoiLz48L3N2Zz4=);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.scroll-down-link {
+  position: absolute;
+  z-index: 4;
+  cursor: pointer;
+  height: 60px;
+  width: 80px;
+  margin: 0px 0 0 -40px;
+  line-height: 60px;
+  left: 50%;
+  bottom: 10px;
+  color: #FFF;
+  text-align: center;
+  font-size: 70px;
+  text-decoration: none;
+  text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
+  -webkit-animation: fade_move_down 3.5s ease-in-out infinite;
+  animation: fade_move_down 3.5s ease-in-out infinite;
+  /*--------animated scroll arrow animation---------*/
+}
+@-webkit-keyframes fade_move_down {
+  0% {
+    -webkit-transform: translate(0, -20px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(0, 20px);
+    opacity: 0;
+  }
+}
+@keyframes fade_move_down {
+  0% {
+    transform: translate(0, -20px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, 20px);
+    opacity: 0;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*--------------BURGIR-MENU-BUTTON--------------–*/
+.hamburgerMenu {
+  width: 35px;
+  height: 45px;
+  background: transparent;
+  border: 0;
+  position: fixed;
+  right: 30px;
+  top: 20px;
+  z-index: 8;
+  pointer-events: none;
+}
+
+.hamburgerMenu .linje {
+  display: block;
+  width: 47px;
+  height: 7px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 3px;
+  margin-bottom: 4px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.menuToggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9;
+  width: 35px;
+  height: 35px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.menuToggle:checked + .hamburgerWrap .hamburgerMenu .linje {
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+}
+
+.menuToggle:checked + .hamburgerWrap .hamburgerMenu .linje:nth-child(2) {
+  transform: rotate(360deg);
+}
+
+.menuToggle:checked + .hamburgerWrap .hamburgerMenu .linje:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.menuToggle:checked + .hamburgerWrap .hamburgerMenu .linje:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+.menuToggle:checked + .hamburgerWrap .navBar {
+  visibility: visible;
+  opacity: 4;
+}
+
+/*--------------Meny Navi--------------–*/
+.navBar {
+  z-index: 7;
+  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.789);
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  visibility: hidden;
+}
+
+.navBar a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+.menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  height: 800px;
+  justify-content: space-evenly;
+  text-align: center;
+  font-family: "Rubik", sans-serif;
+  font-weight: bold;
+  font-size: 3.4rem;
+  text-shadow: 0px 4px rgba(0, 0, 0, 0.4);
+}
+
+.navBar .menu .Underlinje {
+  text-decoration: none;
+  background-image: linear-gradient(90deg, rgba(209, 120, 120, 0.391), #a6007f);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 0% 3px;
+  border-radius: 7px;
+  transition: background-size 300ms ease-in-out;
+  cursor: pointer;
+}
+
+/*-------------Space-Text-Page--------------*/
+.SpacePage {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.434), rgba(0, 0, 0, 0.7)), url(assets/photos/raphael-nogueira-svbDI1Pq30s-unsplash.jpg);
+  background-size: cover;
+  color: rgb(226, 226, 226);
+  font-family: "Rubik", sans-serif;
+}
+
+.SpacePage .wrapper {
+  display: block;
+  position: relative;
+}
+
+.SpacePage .columns {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0px 50px;
+  margin-right: 100px;
+}
+
+.SpaceVentures {
+  margin-left: 5px;
+  width: 78%;
+  padding: 5px;
+  font-size: 900%;
+  height: 146px;
+  text-shadow: 1px 1px 5px rgba(46, 42, 50, 0.95);
+}
+
+.SpacePage .space {
+  font-weight: 600;
+  font-size: 50px;
+  position: relative;
+  z-index: 3;
+  right: 20px;
+  top: -55px;
+}
+
+.SpacePage .ventures {
+  font-family: "Times New Roman", serif;
+  font-weight: bold;
+  font-size: 65px;
+  opacity: 0.7;
+  position: relative;
+  left: 27px;
+  top: -193px;
+}
+
+.SpacePage .titleSpacePage {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 15px -28px;
+  margin-top: -1.23px;
+  margin-bottom: 18px;
+}
+
+.SpacePage .textStyle {
+  line-height: 1.68;
+  margin: 2px -28px;
+  font-weight: 400;
+  font-size: 0.6rem;
+}
+
+.SpacePage .quotes {
+  font-style: italic;
+  font-weight: 100;
+}
+
+.SpacePage .quote1 {
+  font-size: 0.9rem;
+  font-weight: 100;
+  line-height: 1.3;
+  position: relative;
+  left: 4px;
+  margin: 0 0;
+  margin-top: 14px;
+  margin-bottom: 20px;
+}
+
+.SpacePage .quote1::before {
+  content: open-quote;
+  font-weight: normal;
+  font-size: 0.9rem;
+  color: white;
+  font-family: "rubik", Times, serif;
+  position: absolute;
+  left: -4px;
+  top: 1px;
+}
+
+.SpacePage .quote1::after {
+  content: close-quote;
+  font-weight: normal;
+  font-size: 0.9rem;
+  color: white;
+  font-family: "rubik", Times, serif;
+  position: absolute;
+  top: 39px;
+  left: 55px;
+}
+
+.SpacePage .gradient .quote2 {
+  display: none;
+}
+
+.insertLineBreak::before {
+  content: "\a";
+  white-space: pre;
+}
+
+.SpacePage .rosalinje {
+  font-size: 0.66rem;
+  color: rgba(144, 0, 96, 0.8784313725);
+  margin-left: -15px;
+  margin-top: -4px;
+}
+
+.SpacePage .linkUnderlinje {
+  text-decoration: underline;
+}
+
+.Arrow2 {
+  position: absolute;
+  font-size: 1.2rem;
+  right: 260px;
+}
+
+.SpacePage .majorTomLink .Arrow2 {
+  position: relative;
+  left: 0;
+  transition: left 0.3s ease-in-out;
+}
+
+.SpacePage .majorTomLink:hover .Arrow2 {
+  left: 10px;
+  bottom: 0px;
+}
+
+/*-------------DESKTOPO-----------*/
+@media screen and (min-width: 800px) {
+  .menu li:hover .Underlinje {
+    background-size: 100% 6px;
+    color: inherit;
+  }
+  .astronauta .Headerbox .HeaderTxt {
+    text-align: center;
+    font-size: 5.9rem;
+    font-weight: bold;
+    margin-bottom: 52px;
+    margin-top: -36px;
+  }
+  .astronauta .Headerbox {
+    width: 23rem;
+    height: 20rem;
+    padding-top: 40px;
+    font-weight: 100;
+  }
+  .Headerbox {
+    margin-top: 70px;
+    margin-left: 70px;
+  }
+  .astronauta .Headerbox .Headerlink span {
+    position: relative;
+    left: 0;
+    transition: left 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+  }
+  .Headerlink:hover span {
+    position: relative;
+    left: 10px;
+  }
+  .navBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.789);
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    visibility: hidden;
+  }
+  .navBar a {
+    color: black;
+    text-decoration: none;
+  }
+  .menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;
+    text-align: center;
+    font-family: "Rubik", sans-serif;
+    font-weight: bold;
+    font-size: 4rem;
+    text-shadow: 0px 6px rgba(0, 0, 0, 0.4);
+  }
+  .navBar .menu .Underlinje {
+    text-decoration: none;
+    background-image: linear-gradient(90deg, rgba(209, 120, 120, 0.391), #a6007f);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 0% 3px;
+    border-radius: 5px;
+    transition: background-size 300ms ease-in-out;
+    cursor: pointer;
+  }
+  .down-arrow {
+    display: none;
+  }
+  .SpacePage {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.59), rgba(0, 0, 0, 0.477)), url(assets/photos/wide-universe.jpg);
+    background-size: cover;
+    background-position: center center;
+  }
+  .SpacePage .wrapper {
+    display: flex;
+  }
+  .SpacePage .columns {
+    padding: 55px 100px;
+    margin-left: -28px;
+    margin-top: 10px;
+  }
+  .SpacePage .SpaceVentures {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 100px;
+  }
+  .SpacePage .space {
+    font-size: 7rem;
+    top: -48px;
+    right: 0px;
+  }
+  .SpacePage .ventures {
+    font-size: 9rem;
+    left: 5px;
+    top: -8.5rem;
+  }
+  .SpacePage .textStyle .rosalinje {
+    padding: 0 20px;
+  }
+  .SpacePage .textStyle {
+    font-size: 1rem;
+  }
+  .SpacePage .gradient .quote2 {
+    display: block;
+    font-size: 2.7rem;
+    line-height: 1.2;
+    font-weight: 300;
+    background-image: linear-gradient(to bottom right, rgba(227, 12, 177, 0.6392156863), white, rgba(163, 9, 127, 0.8274509804));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-text-emphasis-color: transparent;
+            text-emphasis-color: transparent;
+    opacity: 0.6;
+    padding: 53px 0;
+    width: 400px;
+  }
+  .SpacePage .Major-Tom-pic::before {
+    content: "";
+    background-image: url(assets/photos/major_tom1.jpg);
+    background-size: 85px 125px;
+    width: 125px;
+    height: 125px;
+    display: block;
+    transform: rotate(3deg);
+    float: right;
+    margin: 0 40px;
+    background-repeat: no-repeat;
+  }
+  .insertLineBreak::before {
+    content: none;
+  }
+  .SpacePage .majorTomLink {
+    cursor: pointer;
+  }
+  .SpacePage .Arrow2 {
+    top: 1px;
+  }
+  .SpacePage .majorTomLink .Arrow2 {
+    position: relative;
+    left: 0;
+    transition: left 0.3s ease-in-out;
+  }
+  .SpacePage .majorTomLink:hover .Arrow2 {
+    left: 10px;
+    bottom: 30px;
+  }
+  /*-------------F00TER-------------*/
+  .CookiePU .CookieTxt {
+    font-size: 0.9rem;
+  }
+  .CookiePU .Cookiebutton:hover {
+    background-color: #002A53;
+  }
+}
+.CookiePU {
+  box-sizing: border-box;
+  z-index: 5;
+  background-color: #080325;
+  font-family: "Rubik", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 2%;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.CookiePU .CookieTxt .Cookiebutton .buttonTxt {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.CookiePU .CookieTxt {
+  color: #D200A2;
+  text-shadow: rgba(102, 0, 255, 0.36) 0px 0px 27px;
+  font-size: 0.9rem;
+}
+
+.CookiePU .Cookiebutton {
+  background-color: #003568;
+  color: white;
+  border: 0;
+  padding: 7px 13px;
+  cursor: pointer;
+}
+
+.CookiePU.disable {
+  display: none;
+}
+
+/*----------Mobilregler------*/
+.astronaut .heading-box .link span {
+  position: relative;
+  left: 0px;
+  transition: left cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.astronaut .heading-box .link:hover span {
+  position: relative;
+  left: 10px;
+}
+
+.Headerlink {
+  position: relative;
+  right: 18px;
+  top: 1px;
+  font-weight: 300;
+  cursor: pointer;
+  font-size: 11.6px;
+}
+
+@media screen and (min-width: 799px) {
+  .Headerlink {
+    position: relative;
+    right: -96px;
+    top: -48px;
+    font-weight: 300;
+    cursor: pointer;
+    font-size: 15px;
+  }
+  .SpacePage .quote1 {
+    font-size: 25px;
+    left: 20px;
+    top: 14px;
+    font-style: italic;
+    font-weight: 100;
+  }
+  .SpacePage .quote1::after {
+    content: close-quote;
+    font-weight: normal;
+    font-size: 1.2rem;
+    color: white;
+    font-family: "rubik", Times, serif;
+    position: absolute;
+    top: 67px;
+    left: 95px;
+  }
+  .SpacePage .quote1::before {
+    content: open-quote;
+    font-weight: normal;
+    font-size: 1.2rem;
+    color: white;
+    font-family: "rubik", Times, serif;
+    position: absolute;
+    left: -4px;
+    top: 1px;
+  }
+  .SpacePage .titleSpacePage {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 15px -28px;
+    margin-top: -1.23px;
+    margin-bottom: 18px;
+  }
+}/*# sourceMappingURL=style.css.map */
