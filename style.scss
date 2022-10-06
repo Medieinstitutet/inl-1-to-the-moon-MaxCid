@@ -17,27 +17,25 @@
 
 .astronauta .Headerbox {
     border: 4px solid black;
-    width: 10rem;
+    width: 145px;
+    height: 166px;
     background-color: rgba(255, 255, 255, 0.478);
     position: absolute;
-    top: 90px;
-    left: 63px;
-    padding: 15px;
-    font-family: 'Rubik', sans-serif;
-
+    top: 46px;
+    left: 38px;
+    font-family: "Rubik", sans-serif;
 }
 
-.astronauta .AllCAP {
-    text-transform: uppercase;
-}
-
-.astronauta .Headerbox .HeaderTxt {
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 3rem;
-    font-weight: 800;
+.HeaderTxt {
+    font-size: 35px;
     margin-bottom: 10px;
-    margin-top: -5px;
+    margin-top: 15px;
+    font-weight: 800;
+}
+
+.astronauta .Headerbox {
+    text-align: center;
+
 
 }
 
@@ -277,49 +275,48 @@ html {
     margin-right: 100px;
 }
 
-.SpacePage .SpaceVentures {
-    margin-left: 30px;
+.SpaceVentures {
+    margin-left: 5px;
     width: 78%;
     padding: 5px;
     font-size: 900%;
-    height: 200px;
-    text-shadow: 1px 1px 5px #2e2a32f2;
+    height: 146px;
+    text-shadow: 1px 1px 5px rgb(46 42 50 / 95%);
 
 }
 
 .SpacePage .space {
     font-weight: 600;
-    font-size: 68px;
+    font-size: 50px;
     position: relative;
     z-index: 3;
     right: 20px;
-    top: -25px;
+    top: -55px;
 }
 
 .SpacePage .ventures {
     font-family: "Times New Roman", serif;
     font-weight: bold;
-    font-size: 87px;
+    font-size: 65px;
     opacity: 0.7;
     position: relative;
-    left: 43px;
-    top: -158px;
+    left: 27px;
+    top: -193px;
 }
 
 .SpacePage .titleSpacePage {
-    font-size: 2rem;
+    font-size: 1.1rem;
     font-weight: bold;
-    margin: 15px 0px;
+    margin: 15px -28px;
     margin-top: -1.23px;
     margin-bottom: 18px;
 }
 
 .SpacePage .textStyle {
     line-height: 1.68;
-    margin: 2px -1px;
-    font-weight: 200;
-    font-size: 0.77rem;
-
+    margin: 2px -28px;
+    font-weight: 400;
+    font-size: 0.6rem;
 }
 
 .SpacePage .quotes {
@@ -329,14 +326,14 @@ html {
 }
 
 .SpacePage .quote1 {
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     font-weight: 100;
     line-height: 1.3;
     position: relative;
-    left: 45px;
+    left: 4px;
     margin: 0 0;
-    margin-top: 30px;
-    margin-bottom: 36px;
+    margin-top: 14px;
+    margin-bottom: 20px;
 }
 
 .SpacePage .quote1::before {
@@ -354,12 +351,12 @@ html {
 .SpacePage .quote1::after {
     content: close-quote;
     font-weight: normal;
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: white;
     font-family: "rubik", Times, serif;
     position: absolute;
-    top: 51px;
-    left: 73px;
+    top: 39px;
+    left: 55px;
 }
 
 .SpacePage .gradient .quote2 {
@@ -372,8 +369,10 @@ html {
 }
 
 .SpacePage .rosalinje {
-    font-size: 0.85rem;
-    color: #900060e0;
+    font-size: 0.66rem;
+    color: rgba(144, 0, 96, 0.8784313725);
+    margin-left: -15px;
+    margin-top: -4px;
 
 }
 
@@ -412,8 +411,8 @@ html {
         text-align: center;
         font-size: 5.9rem;
         font-weight: bold;
-        margin-bottom: 53px;
-        margin-top: 24px;
+        margin-bottom: 52px;
+        margin-top: -36px;
     }
 
     .astronauta .Headerbox {
@@ -429,10 +428,6 @@ html {
 
     }
 
-    .astronauta .Headerbox .Headerlink {
-        text-align: right;
-
-    }
 
     .astronauta .Headerbox .Headerlink span {
         position: relative;
@@ -441,7 +436,7 @@ html {
 
     }
 
-    .astronauta .Headerbox .Headerlink:hover span {
+    .Headerlink:hover span {
         position: relative;
         left: 10px;
     }
@@ -495,7 +490,7 @@ html {
     }
 
     .SpacePage {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.59), rgba(0, 0, 0, 0.477)), url(assets/photos/wide-universe.jpg);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.59), rgba(0, 0, 0, 0.477)), url(../assets/photos/wide-universe.jpg);
         background-size: cover;
         background-position: center center;
 
@@ -595,6 +590,7 @@ html {
 
     }
 
+    /*-------------F00TER-------------*/
     .CookiePU .CookieTxt {
         font-size: 0.9rem;
     }
@@ -604,7 +600,6 @@ html {
     }
 }
 
-/*-------------F00TER------------*/
 .CookiePU {
     box-sizing: border-box;
     z-index: 5;
@@ -645,21 +640,33 @@ html {
 
 /*----------Mobilregler------*/
 
-    .astronaut .heading-box .link span {
-        position: relative;
-        left: 0px;
-        transition: left cubic-bezier(0.65, 0, 0.35, 1);
-    }
+.astronaut .heading-box .link span {
+    position: relative;
+    left: 0px;
+    transition: left cubic-bezier(0.65, 0, 0.35, 1);
+}
 
-    .astronaut .heading-box .link:hover span {
-        position: relative;
-        left: 10px;
-    }
+.astronaut .heading-box .link:hover span {
+    position: relative;
+    left: 10px;
+}
 
+.Headerlink {
+    position: relative;
+    right: 18px;
+    top: 1px;
+    font-weight: 300;
+    cursor: pointer;
+    font-size: 11.6px;
+}
+
+@media screen and (min-width:799px) {
     .Headerlink {
         position: relative;
-        right: 5px;
-        top: 7px;
-        font-weight: 100;
+        right: -96px;
+        top: -48px;
+        font-weight: 300;
         cursor: pointer;
+        font-size: 15px;
     }
+}
